@@ -39,7 +39,7 @@ body {
   font-family: var(--primary-font);
   font-size: 1rem;
   color: var(--primary-light);
-  background-color: var(--primary-deepdark);
+  background-color: var(--primary-dark);
 }
 
 .wrapper {
