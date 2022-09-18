@@ -1,0 +1,212 @@
+:root {
+
+
+  --primary-light: #F2f2f2;
+  --primary-medium: #273549;
+  --primary-dark: #1F2937;
+  --primary-deepdark: #1C1C1C;
+  --secondary-color: #bdbdbd;
+  --tertiary-light: #55F991;
+  --tertiary-medium: #4ADF86;
+  --tertiary-dark: #10B981;
+
+  --primary-font: "Arial", sans-serif;
+  --secondary-font: serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid rgba(0, 0, 0, 30%); */
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, input[type=checkbox] {
+  cursor: pointer;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  color: var(--primary-light);
+  background-color: var(--primary-deepdark);
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 550px;
+}
+
+main {
+  padding: 6rem 3rem;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 2rem;
+  background-color: var(--primary-dark);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1>span {
+  display: block;
+  color: var(--tertiary-medium);
+}
+
+.header>p {
+  color: var(--secondary-color);
+}
+
+.checkbox>p {
+  padding: .5rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.checkbox>p>input {
+  flex: 0 0 25px;
+  border-radius: .3rem;
+}
+
+.checkbox>p>label {
+  flex: 1;
+}
+
+.checkmark {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  height: 25px;
+  width: 25px;
+  background-color: var(--primary-medium);
+}
+
+.checkmark:checked {
+  background-color: var(--tertiary-dark);
+}
+
+.select>p {
+  padding: .5rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem 1.5rem;
+}
+
+@media (max-width: 550px) {
+  .select>p {
+    grid-template-columns: 1fr;
+  }
+}
+
+.select>p>label {
+  grid-column: 1 / -1;
+}
+
+.select>p>select{
+  padding: .5rem;
+  border-radius: .3rem;
+  grid-column: 1;
+}
+
+.button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr;
+  grid-gap: 1rem 1.5rem;
+}
+
+@media (max-width: 550px) {
+  .button {
+    grid-template-columns: 1fr;
+  }
+}
+
+.generate-button {
+  grid-row: 1;
+}
+
+.reset-button {
+  grid-row: 1;
+}
+
+@media (max-width: 550px) {
+  .reset-button {
+    grid-row: 2;
+  }
+}
+
+button {
+  padding: .5rem;
+  border: 0;
+  border-radius: .3rem;
+  color: var(--primary-light);
+  background-color: var(--tertiary-dark);
+  transition: filter .05s ease-in-out;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:active {
+  filter: brightness(0.90);
+}
+
+hr {
+  border: 0;
+  outline: 1px solid var(--primary-medium);
+}
+
+.input {
+  display: flex;
+  grid-gap: 1rem 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .input {
+    flex-direction:column;
+  }
+}
+
+.input>input {
+  width: 100%;
+  flex: 1;
+  border: 0;
+  padding: .6rem;
+  border-radius: .3rem;
+  color: var(--tertiary-light);
+  background-color: var(--primary-medium);
+  text-align: center;
+}
+
+.input>input::placeholder {
+  color: transparent;
+}
+
+.input>input:focus {
+  outline: 0;
+  filter: brightness(1.2);
+}

@@ -1,0 +1,60 @@
+<!--
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Solo Project - Random Password Generator</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <main>
+        <div class="header">
+          <h1>Generate a <span>random password</span></h1>
+          <p>Never use an insecure password again</p>
+        </div>
+        <div class="checkbox">
+          <p>
+            Toogle on/off symbols and numbers:
+          </p>
+          <p>
+            <input type="checkbox" id="checkmark-symbol" name="symbol" class="checkmark" checked />
+            <label for="checkmark-symbol">Symbols</label>
+          </p>
+          <p>
+            <input type="checkbox" id="checkmark-number" name="number" class="checkmark" checked />
+            <label for="checkmark-number">Numbers</label>
+          </p>
+        </div>
+        <div class="select">
+          <p>
+            <label for="password-length">Set Password length:</label>
+            <select id="password-length">
+              <option disabled value>Select an option</option>
+              <option value="10" selected>10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+            </select>
+          </p>
+        </div>
+        <div class="button">
+          <button class="generate-button">Generate passwords</button>
+          <button class="reset-button">Reset</button>
+        </div>
+        <hr />
+        <div class="input">
+          <input type="text" class="input-one" placeholder="0" />
+          <input type="text" class="input-two" placeholder="0" />
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
