@@ -29,6 +29,8 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  outline: 0;
+  border: 0;
 }
 
 button, input[type=checkbox] {
@@ -43,10 +45,10 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
+  height: 100%;
   display: flex;
   padding: 1.5rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -56,7 +58,7 @@ body {
 }
 
 main {
-  padding: 6rem 3rem;
+  padding: 3rem 3rem;
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 2rem;
@@ -109,7 +111,6 @@ h1>span {
 }
 
 .select>p {
-  padding: .5rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem 1.5rem;
@@ -209,4 +210,17 @@ hr {
 .input>input:focus {
   outline: 0;
   filter: brightness(1.2);
+}
+
+footer {
+  padding: 0 3rem;
+}
+
+footer>p {
+  font-size: .65rem;
+  text-align: right;
+}
+
+footer>p>a {
+  color: var(--tertiary-light);
 }
