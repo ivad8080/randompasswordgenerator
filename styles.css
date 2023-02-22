@@ -45,6 +45,7 @@ body {
 }
 
 .wrapper {
+  min-height: 100vh;
   height: 100%;
   display: flex;
   padding: 1.5rem;
